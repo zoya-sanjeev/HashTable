@@ -12,4 +12,19 @@ public class MyHashMap<K,V> {
 		return (myMapNode==null)?null:myMapNode.getValue();
 	}
 
+	public void add(K key, V value) {
+		MyMapNode<K, V> myMapNode=(MyMapNode) this.linkedlist.search(key);
+		if(myMapNode==null) {
+			myMapNode=new MyMapNode<>(key, value);
+			this.linkedlist.append(myMapNode);
+		}
+		else {
+			myMapNode.setValue(value);
+		}
+		
+	}
+	@Override
+	public String toString() {
+		return "MyHashMapNodes{"+linkedlist+"}";
+	}
 }

@@ -14,6 +14,7 @@ public class HashTableMain {
 				value=value+1;
 			myHashMap.add(word,value);
 		}
+		System.out.println(myHashMap);
 	}
 
 }
