@@ -25,6 +25,6 @@ public class MyHashMap<K,V> {
 	}
 	@Override
 	public String toString() {
-		return "MyHashMapNodes{"+linkedlist+"}";
+		return "MyHashMapNodes{"+linkedlist+'}';
 	}
 }

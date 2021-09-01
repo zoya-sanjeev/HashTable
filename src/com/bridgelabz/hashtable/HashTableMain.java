@@ -14,6 +14,7 @@ public class HashTableMain {
 				value=value+1;
 			myHashMap.add(word,value);
 		}
+		System.out.println("Frequency of the word to is"+myHashMap.get("to"));
 		System.out.println(myHashMap);
 	}
 
