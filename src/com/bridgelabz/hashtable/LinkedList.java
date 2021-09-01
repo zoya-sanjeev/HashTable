@@ -53,16 +53,14 @@ public class LinkedList<K> {
 		return tempNode;
 		
 	}
-	public int search(K key) {
+	public INode search(K key) {
 		INode tempNode=this.head;
-		int index=0;
 		while(!tempNode.equals(this.tail)) {
 			if(tempNode.getKey().equals(key))
-				return index;
+				return tempNode;
 			tempNode=tempNode.getNext();
-			index++;
 		}
-		return index;	
+		return tempNode=null;	
 		
 	}
 	
