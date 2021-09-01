@@ -16,6 +16,9 @@ public class HashTableMain {
 		}
 		System.out.println(myLinkedHashMap);
 		int frequency=myLinkedHashMap.get("paranoid");
+		String wordToDelete="avoidable";
+		int newSize=myLinkedHashMap.deleteKey(wordToDelete);
+		System.out.println(myLinkedHashMap);
 		
 	}
 

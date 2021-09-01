@@ -1,5 +1,5 @@
 package com.bridgelabz.hashtable;
-
+	
 
 public class LinkedList<K> {
 	private INode head;
@@ -45,6 +45,30 @@ public class LinkedList<K> {
 		
 		}
 		return size;
+	}
+	
+	public void deleteNode(K key) {
+		INode currentNode=this.head;
+		INode previousNode=null;
+		
+		if(currentNode.getKey().equals(key)) {
+			head=head.getNext();
+			currentNode=null;
+		}
+		while(currentNode!=null) {
+			if(currentNode.getKey().equals(key)) {
+				if(currentNode.getNext()==null)
+					previousNode.setNext(null);
+				else 
+					previousNode.setNext(currentNode.getNext());
+				currentNode=null;
+				break;
+			}
+			previousNode=currentNode;
+			currentNode=currentNode.getNext();
+		}
+		
+		
 	}
 
 	@Override

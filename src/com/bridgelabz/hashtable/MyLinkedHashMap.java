@@ -45,6 +45,21 @@ public class MyLinkedHashMap<K,V> {
 		}
 	}
 	
+	public int deleteKey(K key) {
+		int index=this.getBucketIndex(key);
+		LinkedList<K> myLinkedList=this.myBuckeyArray.get(index);
+		if(myLinkedList==null) {
+			return -1;
+		}
+		else {
+			MyMapNode<K,V> myMapNode=(MyMapNode<K,V>)myLinkedList.search(key);
+			 myLinkedList.deleteNode(myMapNode.getKey());
+			return 1;
+		}
+		
+			
+	}
+	
 	@Override
 	public String toString() {
 		return "MyLinkedHashMap List{" +myBuckeyArray+'}';
